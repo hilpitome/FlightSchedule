@@ -3,21 +3,23 @@ package com.workshop.hilpitome.flightscheduler.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.json.JSONArray;
+
 import java.util.List;
 
 public class ScheduleResource {
     @SerializedName("Schedule")
     @Expose
-    private List<FlightInfo> schedule;
+    private JSONArray schedule;
 
     public ScheduleResource() {
     }
 
-    public List<FlightInfo> getSchedule() {
+    public JSONArray getSchedule() {
         return schedule;
     }
 
-    public void setSchedule(List<FlightInfo> schedule) {
+    public void setSchedule(JSONArray schedule) {
         this.schedule = schedule;
     }
 }

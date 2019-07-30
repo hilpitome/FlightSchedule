@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements CommonView,
     }
     // connect the html to their java equivalents
     public void initViews(){
-        progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progress);
         fromSpinner = findViewById(R.id.from_spinner);
         toSpinner = findViewById(R.id.to_spinner);
         fetchSchedulesBtn = findViewById(R.id.fetch_schedules_btn);

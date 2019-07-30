@@ -28,19 +28,19 @@ public class LufthansaServiceGenerator {
         b.readTimeout(60, TimeUnit.SECONDS);
         b.writeTimeout(60, TimeUnit.SECONDS);
         b.addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY));
-        b.addNetworkInterceptor(new Interceptor() {
-            @Override
-            public Response intercept(@NonNull Chain chain) throws IOException {
-                Response response = null;
-                try {
-                    response = chain.proceed(chain.request());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                System.out.println(response.message());
-                return response;
-            }
-        });
+//        b.addNetworkInterceptor(new Interceptor() {
+//            @Override
+//            public Response intercept(@NonNull Chain chain) throws IOException {
+//                Response response = null;
+//                try {
+//                    response = chain.proceed(chain.request());
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+////                System.out.println(response.message());
+//                return response;
+//            }
+//        });
 
         OkHttpClient okHttpClient = b.build();
 
