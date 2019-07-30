@@ -1,4 +1,4 @@
-package com.workshop.hilpitome.flightscheduler.Utils;
+package com.workshop.hilpitome.flightscheduler.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -46,7 +46,7 @@ public class PrefUtils {
         editor.commit();
     }
 
-    void setKeyAccessToken(String access_token) {
+    public void setKeyAccessToken(String access_token) {
         editor.putString(KEY_ACCESS_TOKEN, access_token);
         editor.commit();
     }
@@ -58,6 +58,10 @@ public class PrefUtils {
 
     public String getKeyAccessToken() {
         return sharedPreferences.getString(KEY_ACCESS_TOKEN, null);
+    }
+
+    public void setKeyIsLoggedIn(){
+        editor.putBoolean(KEY_IS_LOGGED_IN, true);
     }
 
 

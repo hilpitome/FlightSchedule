@@ -1,10 +1,10 @@
-package com.workshop.hilpitome.flightscheduler.Utils;
+package com.workshop.hilpitome.flightscheduler.utils;
 
 import android.support.annotation.NonNull;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.workshop.hilpitome.flightscheduler.networking.NetworkApi;
+import com.workshop.hilpitome.flightscheduler.networking.LufthansaNetworkApi;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -17,11 +17,11 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class NetworkService {
+public class LufthansaServiceGenerator {
     private Retrofit retrofit;
-    private NetworkApi networkApi;
+    private LufthansaNetworkApi networkApi;
 
-    public NetworkService() {
+    public LufthansaServiceGenerator() {
         //  Client request
         OkHttpClient.Builder b = new OkHttpClient.Builder();
         b.connectTimeout(60, TimeUnit.SECONDS);
@@ -55,7 +55,7 @@ public class NetworkService {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .client(okHttpClient)
                 .build();
-        networkApi = retrofit.create(NetworkApi.class);
+        networkApi = retrofit.create(LufthansaNetworkApi.class);
 
     }
 
@@ -63,11 +63,11 @@ public class NetworkService {
         return retrofit;
     }
 
-    public NetworkApi getAPI() {
+    public LufthansaNetworkApi getAPI() {
         return networkApi;
     }
 
-    public NetworkApi getNetworkAPI(final String authToken) {
+    public LufthansaNetworkApi getNetworkAPI(final String authToken) {
         return networkApi;
     }
 }
