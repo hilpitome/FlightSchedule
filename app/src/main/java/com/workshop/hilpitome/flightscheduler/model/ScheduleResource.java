@@ -1,5 +1,6 @@
 package com.workshop.hilpitome.flightscheduler.model;
 
+import com.google.gson.JsonElement;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -10,16 +11,16 @@ import java.util.List;
 public class ScheduleResource {
     @SerializedName("Schedule")
     @Expose
-    private JSONArray schedule;
+    private JsonElement schedule;
 
     public ScheduleResource() {
     }
 
-    public JSONArray getSchedule() {
+    public JsonElement getSchedule() {
         return schedule;
     }
 
-    public void setSchedule(JSONArray schedule) {
+    public void setSchedule(JsonElement schedule) {
         this.schedule = schedule;
     }
 }

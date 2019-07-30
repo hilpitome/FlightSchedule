@@ -11,6 +11,8 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.workshop.hilpitome.flightscheduler.MainActivityPresenter;
 import com.workshop.hilpitome.flightscheduler.MainApplication;
 import com.workshop.hilpitome.flightscheduler.R;
@@ -34,6 +36,7 @@ public class FlightSchedulesActivity extends AppCompatActivity implements Common
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         initViews();
+        setUpRecyclerView();
         Bundle bundle = getIntent().getExtras();
         String origin = bundle.getString("from");
         String destination = bundle.getString("to");
@@ -67,6 +70,17 @@ public class FlightSchedulesActivity extends AppCompatActivity implements Common
     public void setSchedulesResponse(SchedulesResponse response) {
         Gson gson = new Gson();
         Log.e("schedules-response",gson.toJson(response));
+        JsonArray scheduleList = null;
+        if(response.getScheduleResource().getSchedule().isJsonArray()){
+            scheduleList = response.getScheduleResource().getSchedule().getAsJsonArray();
+        } else {
+            scheduleList.add(response.getScheduleResource().getSchedule());
+        }
+        for (JsonElement el:
+             scheduleList) {
+
+
+        }
     }
 
     private void setUpRecyclerView() {
