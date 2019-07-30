@@ -85,5 +85,6 @@ public class MainActivity extends AppCompatActivity implements CommonView, MainA
         prefUtils.setKeyTokenType(response.getTokenType());
         prefUtils.setKeyAccessToken(response.getAccessToken());
         prefUtils.setKeyIsLoggedIn();
+        presenter.fetchAirports("Bearer "+response.getAccessToken());
     }
 }

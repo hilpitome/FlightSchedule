@@ -7,4 +7,14 @@ public class AirportResource {
     @SerializedName("Airports")
     @Expose
     private Airports airports;
+
+    public AirportResource(){}
+
+    public Airports getAirports() {
+        return airports;
+    }
+
+    public void setAirports(Airports airports) {
+        this.airports = airports;
+    }
 }
