@@ -12,6 +12,8 @@ public class Name {
     @Expose
     private String $;
 
+    public Name(){}
+
     public String getLanguageCode() {
         return languageCode;
     }

@@ -1,27 +1,41 @@
 package com.workshop.hilpitome.flightscheduler;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatSpinner;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.workshop.hilpitome.flightscheduler.adapters.FromSpinnerAdapter;
+import com.workshop.hilpitome.flightscheduler.adapters.ToSpinnerAdapter;
+import com.workshop.hilpitome.flightscheduler.model.AirportInfo;
+import com.workshop.hilpitome.flightscheduler.model.AirportsResponse;
 import com.workshop.hilpitome.flightscheduler.model.AuthResponse;
+import com.workshop.hilpitome.flightscheduler.model.Name;
+import com.workshop.hilpitome.flightscheduler.model.Names;
 import com.workshop.hilpitome.flightscheduler.utils.CommonView;
 import com.workshop.hilpitome.flightscheduler.utils.LufthansaServiceGenerator;
 import com.workshop.hilpitome.flightscheduler.utils.PrefUtils;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements CommonView, MainActivityView {
     private final String TAG = MainActivity.class.getSimpleName();
     private MainActivityPresenter presenter;
     private PrefUtils prefUtils;
     private ProgressBar progressBar;
+    private List<AirportInfo> airportInfoList;
+    private FromSpinnerAdapter fromSpinnerAdapter;
+    private ToSpinnerAdapter toSpinnerAdapter;
+    private AppCompatSpinner fromSpinner;
+    private AppCompatSpinner toSpinner;
+    private String mFromAirportCode;
+    private String setmToAirportCode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,12 +49,44 @@ public class MainActivity extends AppCompatActivity implements CommonView, MainA
         presenter = new MainActivityPresenter(lufthansaServiceGenerator, this, this);
         String clientId = getString(R.string.lufthansa_app_id);
         String secret = getString(R.string.lufthansa_app_secret);
+        initViews();
+        setSpinners();
         presenter.authenticateApplication(clientId, secret);
 
     }
     // connect the html to their java equivalents
     public void initViews(){
         progressBar = findViewById(R.id.progressBar);
+        fromSpinner = findViewById(R.id.from_spinner);
+        toSpinner = findViewById(R.id.to_spinner);
+    }
+
+    private void setSpinners() {
+        fromSpinnerAdapter = new FromSpinnerAdapter(getApplicationContext());
+        fromSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                setmFromAirportCode(fromSpinnerAdapter.getItem(i).getAirportCode());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        toSpinnerAdapter = new ToSpinnerAdapter(getApplicationContext());
+        toSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                setmFromAirportCode(toSpinnerAdapter.getItem(i).getAirportCode());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
 
     @Override
@@ -86,5 +132,43 @@ public class MainActivity extends AppCompatActivity implements CommonView, MainA
         prefUtils.setKeyAccessToken(response.getAccessToken());
         prefUtils.setKeyIsLoggedIn();
         presenter.fetchAirports("Bearer "+response.getAccessToken());
+    }
+
+    @Override
+    public void setFetchAirportsResponse(AirportsResponse response) {
+        this.airportInfoList = response.getAirportResource().getAirports().getAirport();
+        // set FromSpinner
+        fromSpinnerAdapter.clear();
+        AirportInfo promptFrom = new AirportInfo();
+        promptFrom.setAirportCode("N/A");
+        Name name = new Name();
+        name.set$("Select Departure");
+        Names names = new Names();
+        names.setName(name);
+        promptFrom.setNames(names);
+        fromSpinnerAdapter.addPrompt(promptFrom);
+        fromSpinnerAdapter.addItems(airportInfoList);
+        fromSpinner.setAdapter(fromSpinnerAdapter);
+        // set toSpinner
+        toSpinnerAdapter.clear();
+        AirportInfo promptTo = new AirportInfo();
+        promptTo.setAirportCode("N/A");
+        Name nameTo = new Name();
+        nameTo.set$("Select Destination");
+        Names namesTo = new Names();
+        namesTo.setName(nameTo);
+        promptTo.setNames(namesTo);
+        toSpinnerAdapter.addPrompt(promptTo);
+        toSpinnerAdapter.addItems(airportInfoList);
+        toSpinner.setAdapter(toSpinnerAdapter);
+
+    }
+
+    private void setmFromAirportCode(String code){
+        this.mFromAirportCode = code;
+    }
+
+    private void setmToAirportCode(String code){
+        this.setmToAirportCode = code;
     }
 }

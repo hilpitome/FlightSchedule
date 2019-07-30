@@ -1,6 +1,6 @@
 package com.workshop.hilpitome.flightscheduler.networking;
 
-import com.workshop.hilpitome.flightscheduler.model.AirportResource;
+import com.workshop.hilpitome.flightscheduler.model.AirportsResponse;
 import com.workshop.hilpitome.flightscheduler.model.AuthResponse;
 import com.workshop.hilpitome.flightscheduler.model.LoginData;
 
@@ -28,6 +28,7 @@ public interface LufthansaNetworkApi {
      */
     @Headers("Accept: application/json")
     @GET("mds-references/airports?lang=EN")
-    Observable<Response<AirportResource>> fetchAirports(@Header("Authorization") String accessToken);
+    Observable<Response<AirportsResponse>> fetchAirports(@Header("Authorization") String accessToken);
 
 }
+

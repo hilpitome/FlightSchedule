@@ -11,9 +11,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9412fb81-baa5-4a3a-b93e-1dfb79f1951c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/adapters/FromSpinnerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/adapters/ToSpinnerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AirportsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/spinner_item_dropdown.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/spinner_item_non_dropdown.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/colors_material.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivityPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivityPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AirportResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AirportResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivityView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivityView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Airports.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Airports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Name.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/networking/LufthansaNetworkApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/networking/LufthansaNetworkApi.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,23 +50,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="87" column="67" selection-start-line="87" selection-start-column="67" selection-end-line="87" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Position.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+            <state relative-caret-position="90">
+              <caret line="144" column="35" selection-start-line="144" selection-start-column="35" selection-end-line="144" selection-end-column="35" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#266#267#0" expanded="true" />
-                <element signature="e#299#300#0" expanded="true" />
-                <element signature="e#355#356#0" expanded="true" />
-                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#4687#4688#0" expanded="true" />
+                <element signature="e#4730#4731#0" expanded="true" />
+                <element signature="e#4655#4656#0" expanded="true" />
+                <element signature="e#4700#4701#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,78 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Names.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#166#167#0" expanded="true" />
-                <element signature="e#193#194#0" expanded="true" />
-                <element signature="e#231#232#0" expanded="true" />
-                <element signature="e#263#264#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AirportInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#883#884#0" expanded="true" />
-                <element signature="e#937#938#0" expanded="true" />
-                <element signature="e#983#984#0" expanded="true" />
-                <element signature="e#1020#1021#0" expanded="true" />
-                <element signature="e#1051#1052#0" expanded="true" />
-                <element signature="e#1101#1102#0" expanded="true" />
-                <element signature="e#1141#1142#0" expanded="true" />
-                <element signature="e#1176#1177#0" expanded="true" />
-                <element signature="e#1207#1208#0" expanded="true" />
-                <element signature="e#1255#1256#0" expanded="true" />
-                <element signature="e#1295#1296#0" expanded="true" />
-                <element signature="e#1333#1334#0" expanded="true" />
-                <element signature="e#1367#1368#0" expanded="true" />
-                <element signature="e#1421#1422#0" expanded="true" />
-                <element signature="e#1467#1468#0" expanded="true" />
-                <element signature="e#1498#1499#0" expanded="true" />
-                <element signature="e#1526#1527#0" expanded="true" />
-                <element signature="e#1567#1568#0" expanded="true" />
-                <element signature="e#1601#1602#0" expanded="true" />
-                <element signature="e#1637#1638#0" expanded="true" />
-                <element signature="e#1669#1670#0" expanded="true" />
-                <element signature="e#1719#1720#0" expanded="true" />
-                <element signature="e#1761#1762#0" expanded="true" />
-                <element signature="e#1798#1799#0" expanded="true" />
-                <element signature="e#1831#1832#0" expanded="true" />
-                <element signature="e#1883#1884#0" expanded="true" />
-                <element signature="e#1927#1928#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Airport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#286#287#0" expanded="true" />
-                <element signature="e#337#338#0" expanded="true" />
-                <element signature="e#369#370#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/networking/LufthansaNetworkApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+            <state relative-caret-position="144">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,32 +75,77 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Airports.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Name.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+            <state relative-caret-position="90">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#217#218#0" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
-                <element signature="e#294#295#0" expanded="true" />
-                <element signature="e#332#333#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AirportResource.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+            <state relative-caret-position="380">
+              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/adapters/FromSpinnerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#358#359#0" expanded="true" />
-                <element signature="e#408#409#0" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
+                <element signature="e#930#931#0" expanded="true" />
+                <element signature="e#970#971#0" expanded="true" />
+                <element signature="e#1077#1078#0" expanded="true" />
+                <element signature="e#1114#1115#0" expanded="true" />
+                <element signature="e#854#855#0" expanded="true" />
+                <element signature="e#909#910#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/adapters/ToSpinnerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="59" column="45" lean-forward="true" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
+                <element signature="e#609#610#0" expanded="true" />
+                <element signature="e#843#844#0" expanded="true" />
+                <element signature="e#897#898#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_item_non_dropdown.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_item_dropdown.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -172,8 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivityPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="107" column="72" selection-start-line="107" selection-start-column="72" selection-end-line="107" selection-end-column="72" />
+            <state relative-caret-position="25">
+              <caret line="112" column="85" selection-start-line="112" selection-start-column="85" selection-end-line="112" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -182,12 +163,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AuthResponse.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivityView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+            <state relative-caret-position="90">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding>
-                <element signature="e#850#851#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -200,6 +181,7 @@
       <list>
         <option value="Interface" />
         <option value="valueResourceFile" />
+        <option value="layoutResourceFile" />
         <option value="Class" />
       </list>
     </option>
@@ -207,6 +189,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>prese</find>
+      <find>set</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -227,21 +210,29 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/Utils/CommonView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainApplication.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivityView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/utils/PrefUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/secrets.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Name.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Coordinate.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Position.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Names.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AirportInfo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Airport.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Airports.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/networking/LufthansaNetworkApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AirportResource.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/networking/LufthansaNetworkApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AirportsResponse.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/utils/LufthansaServiceGenerator.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Airports.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/adapters/FromAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_item_dropdown.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors_material.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_item_non_dropdown.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/adapters/FromSpinnerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivityView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/adapters/ToSpinnerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Name.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivityPresenter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivity.java" />
       </list>
@@ -260,17 +251,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FlightScheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlightScheduler" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -403,14 +383,29 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="flightscheduler" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="adapters" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FlightScheduler" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="flightscheduler" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="FlightScheduler" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FlightScheduler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlightScheduler" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -426,6 +421,9 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.workshop.hilpitome.flightscheduler.Utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/values" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -519,7 +517,7 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2801277" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2529928" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -528,12 +526,12 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.14495113" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="1" visible="true" weight="0.23452769" />
       <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.4267101" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.36319217" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="5" weight="0.56677526" />
-      <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="5" weight="0.32084692" />
+      <window_info anchor="bottom" id="Android Profiler" order="6" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info anchor="bottom" id="Debug" order="8" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.28731045" />
@@ -589,16 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/utils/LufthansaServiceGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-626">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -623,11 +611,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AndroidStudio/DeviceExplorer/itel-itel_s13-ONAUJFHA8LIZO7EM/data/data/com.workshop.hilpitome.flightscheduler/configurationCache.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-724" />
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AndroidStudio/DeviceExplorer/itel-itel_s13-ONAUJFHA8LIZO7EM/data/data/com.workshop.hilpitome.flightscheduler/configurationCache.txt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -665,43 +649,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivityView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/utils/CommonView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Name.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -723,102 +674,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Names.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AirportInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1101#1102#0" expanded="true" />
-            <element signature="e#1141#1142#0" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1255#1256#0" expanded="true" />
-            <element signature="e#1295#1296#0" expanded="true" />
-            <element signature="e#1333#1334#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
-            <element signature="e#1421#1422#0" expanded="true" />
-            <element signature="e#1467#1468#0" expanded="true" />
-            <element signature="e#1498#1499#0" expanded="true" />
-            <element signature="e#1526#1527#0" expanded="true" />
-            <element signature="e#1567#1568#0" expanded="true" />
-            <element signature="e#1601#1602#0" expanded="true" />
-            <element signature="e#1637#1638#0" expanded="true" />
-            <element signature="e#1669#1670#0" expanded="true" />
-            <element signature="e#1719#1720#0" expanded="true" />
-            <element signature="e#1761#1762#0" expanded="true" />
-            <element signature="e#1798#1799#0" expanded="true" />
-            <element signature="e#1831#1832#0" expanded="true" />
-            <element signature="e#1883#1884#0" expanded="true" />
-            <element signature="e#1927#1928#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Airports.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#217#218#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Airport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#337#338#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/networking/LufthansaNetworkApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+        <state relative-caret-position="324">
+          <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -827,7 +696,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AuthResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="522">
           <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
           <folding>
             <element signature="e#850#851#0" expanded="true" />
@@ -837,31 +706,183 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AirportResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        <state relative-caret-position="144">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/utils/LufthansaServiceGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AirportsResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/AirportInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Airports.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Airport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors_material.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_item_dropdown.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_item_non_dropdown.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivityView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Names.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/model/Name.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivityPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="107" column="72" selection-start-line="107" selection-start-column="72" selection-end-line="107" selection-end-column="72" />
+        <state relative-caret-position="25">
+          <caret line="112" column="85" selection-start-line="112" selection-start-column="85" selection-end-line="112" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/adapters/FromSpinnerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#1077#1078#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#909#910#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/adapters/ToSpinnerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="59" column="45" lean-forward="true" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/workshop/hilpitome/flightscheduler/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="87" column="67" selection-start-line="87" selection-start-column="67" selection-end-line="87" selection-end-column="67" />
+        <state relative-caret-position="90">
+          <caret line="144" column="35" selection-start-line="144" selection-start-column="35" selection-end-line="144" selection-end-column="35" />
+          <folding>
+            <element signature="e#4687#4688#0" expanded="true" />
+            <element signature="e#4730#4731#0" expanded="true" />
+            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4700#4701#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

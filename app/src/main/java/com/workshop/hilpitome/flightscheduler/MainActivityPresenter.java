@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.workshop.hilpitome.flightscheduler.model.AirportResource;
+import com.workshop.hilpitome.flightscheduler.model.AirportsResponse;
 import com.workshop.hilpitome.flightscheduler.utils.CommonView;
 import com.workshop.hilpitome.flightscheduler.utils.LufthansaServiceGenerator;
 import com.workshop.hilpitome.flightscheduler.model.AuthResponse;
@@ -76,11 +77,11 @@ public class MainActivityPresenter {
 
     public void fetchAirports(String accessToken){
         commonView.showWait();
-        Observable<Response<AirportResource>> observable = service.getAPI().fetchAirports(accessToken);
+        Observable<Response<AirportsResponse>> observable = service.getAPI().fetchAirports(accessToken);
         Subscription subscription = observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<Response <AirportResource>>() {
+                .subscribe(new Observer<Response <AirportsResponse>>() {
                     @Override
                     public void onCompleted() {
 
@@ -103,12 +104,13 @@ public class MainActivityPresenter {
 
                     //On authentication successful
                     @Override
-                    public void onNext(Response<AirportResource> response) {
+                    public void onNext(Response<AirportsResponse> response) {
                         Gson gson = new Gson();
                         Log.e("airports", gson.toJson(response));
                         commonView.removeWait();
                         if (response.isSuccessful()) {
                             System.out.println("airports fetched successfully");
+                            mainActivityView.setFetchAirportsResponse(response.body());
                         }
                     }
                 });
