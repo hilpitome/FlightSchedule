@@ -1,13 +1,16 @@
 package com.workshop.hilpitome.flightscheduler;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatSpinner;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -18,13 +21,15 @@ import com.workshop.hilpitome.flightscheduler.model.AirportsResponse;
 import com.workshop.hilpitome.flightscheduler.model.AuthResponse;
 import com.workshop.hilpitome.flightscheduler.model.Name;
 import com.workshop.hilpitome.flightscheduler.model.Names;
+import com.workshop.hilpitome.flightscheduler.schedule.FlightSchedulesActivity;
 import com.workshop.hilpitome.flightscheduler.utils.CommonView;
 import com.workshop.hilpitome.flightscheduler.utils.LufthansaServiceGenerator;
 import com.workshop.hilpitome.flightscheduler.utils.PrefUtils;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements CommonView, MainActivityView {
+public class MainActivity extends AppCompatActivity implements CommonView,
+        MainActivityView, View.OnClickListener {
     private final String TAG = MainActivity.class.getSimpleName();
     private MainActivityPresenter presenter;
     private PrefUtils prefUtils;
@@ -34,8 +39,9 @@ public class MainActivity extends AppCompatActivity implements CommonView, MainA
     private ToSpinnerAdapter toSpinnerAdapter;
     private AppCompatSpinner fromSpinner;
     private AppCompatSpinner toSpinner;
+    private Button fetchSchedulesBtn;
     private String mFromAirportCode;
-    private String setmToAirportCode;
+    private String mToAirportCode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements CommonView, MainA
         presenter = new MainActivityPresenter(lufthansaServiceGenerator, this, this);
         String clientId = getString(R.string.lufthansa_app_id);
         String secret = getString(R.string.lufthansa_app_secret);
-        initViews();
         setSpinners();
         presenter.authenticateApplication(clientId, secret);
 
@@ -59,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements CommonView, MainA
         progressBar = findViewById(R.id.progressBar);
         fromSpinner = findViewById(R.id.from_spinner);
         toSpinner = findViewById(R.id.to_spinner);
+        fetchSchedulesBtn = findViewById(R.id.fetch_schedules_btn);
+        fetchSchedulesBtn.setOnClickListener(this);
     }
 
     private void setSpinners() {
@@ -79,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements CommonView, MainA
         toSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                setmFromAirportCode(toSpinnerAdapter.getItem(i).getAirportCode());
+                setmToAirportCode(toSpinnerAdapter.getItem(i).getAirportCode());
             }
 
             @Override
@@ -165,10 +172,33 @@ public class MainActivity extends AppCompatActivity implements CommonView, MainA
     }
 
     private void setmFromAirportCode(String code){
+        Log.e("from", code);
         this.mFromAirportCode = code;
     }
 
     private void setmToAirportCode(String code){
-        this.setmToAirportCode = code;
+        Log.e("to", code);
+        this.mToAirportCode = code;
+    }
+
+    private void fetchSchedules(){
+        if(this.mFromAirportCode.equals("N/A") || this.mToAirportCode.equals("N/A")){
+            Toast.makeText(this, "Please select departure and destination", Toast.LENGTH_LONG).show();
+        } else {
+            Intent intent = new Intent(MainActivity.this, FlightSchedulesActivity.class);
+            intent.putExtra("from", this.mFromAirportCode);
+            intent.putExtra("to", this.mToAirportCode);
+            startActivity(intent);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id){
+            case R.id.fetch_schedules_btn:
+                fetchSchedules();
+                break;
+        }
     }
 }
