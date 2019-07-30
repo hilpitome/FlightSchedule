@@ -30,5 +30,8 @@ public interface LufthansaNetworkApi {
     @GET("mds-references/airports?lang=EN")
     Observable<Response<AirportsResponse>> fetchAirports(@Header("Authorization") String accessToken);
 
+
+//    @Headers("Accept: application/json")
+//    @GET("operations/schedules/{origin}/{destination}/{fromDateTime}?directFlights=true]")
 }
 
