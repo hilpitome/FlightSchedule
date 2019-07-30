@@ -27,7 +27,6 @@ public class MainActivityPresenter {
         this.commonView = commonView;
         this.mainActivityView = mainActivityView;
         subscriptions = new CompositeSubscription();
-
     }
 
     public void authenticateApplication(String clientId,String client_secret){
@@ -44,7 +43,7 @@ public class MainActivityPresenter {
 
                     }
 
-                    //On registration failed
+                    //On login failed
                     @Override
                     public void onError(Throwable e) {
                         e.printStackTrace();
@@ -59,17 +58,13 @@ public class MainActivityPresenter {
                         System.out.println("Something wrong here " + e.getMessage());
                     }
 
-                    //On registration successful
+                    //On authentication successful
                     @Override
                     public void onNext(Response<AuthResponse> response) {
-                        Gson gson=new Gson();
-                        Log.i("gson",gson.toJson(response));
-
-
                         commonView.removeWait();
                         if (response.isSuccessful()) {
                             mainActivityView.setLoginResponse(response.body());
-                            System.out.println("Registration completed successfully");
+                            System.out.println("login completed successfully");
                         }
                     }
                 });
