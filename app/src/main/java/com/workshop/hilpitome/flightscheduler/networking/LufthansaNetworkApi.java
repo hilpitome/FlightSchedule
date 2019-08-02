@@ -5,6 +5,7 @@ import com.workshop.hilpitome.flightscheduler.model.AuthResponse;
 import com.workshop.hilpitome.flightscheduler.model.LoginData;
 import com.workshop.hilpitome.flightscheduler.model.SchedulesResponse;
 
+import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
@@ -21,9 +22,9 @@ public interface LufthansaNetworkApi {
 
     @FormUrlEncoded
     @POST("oauth/token")
-    Observable<Response<AuthResponse>> login(@Field("client_secret") String secret,
-                                             @Field("grant_type") String grantType,
-                                             @Field("client_id") String clientId);
+    Call<AuthResponse> login(@Field("client_secret") String secret,
+                             @Field("grant_type") String grantType,
+                             @Field("client_id") String clientId);
 
 
     /**

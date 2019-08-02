@@ -52,11 +52,11 @@ public class MainActivity extends AppCompatActivity implements CommonView,
         initViews();
         prefUtils = new PrefUtils(this);
         LufthansaServiceGenerator lufthansaServiceGenerator = ((MainApplication) getApplication()).getLuftNetworkService();
-        presenter = new MainActivityPresenter(lufthansaServiceGenerator, this, this);
-        String clientId = getString(R.string.lufthansa_app_id);
-        String secret = getString(R.string.lufthansa_app_secret);
+        presenter = new MainActivityPresenter(lufthansaServiceGenerator,
+                this, this, prefUtils, this);
         setSpinners();
-        presenter.authenticateApplication(clientId, secret);
+        presenter.fetchAirports("Bearer "+prefUtils.getKeyAccessToken());
+//        presenter.authenticateApplication(clientId, secret);
 
     }
     // connect the html to their java equivalents
@@ -135,9 +135,9 @@ public class MainActivity extends AppCompatActivity implements CommonView,
 
     @Override
     public void setLoginResponse(AuthResponse response) {
-        prefUtils.setKeyTokenType(response.getTokenType());
-        prefUtils.setKeyAccessToken(response.getAccessToken());
-        prefUtils.setKeyIsLoggedIn();
+//        prefUtils.setKeyTokenType(response.getTokenType());
+//        prefUtils.setKeyAccessToken(response.getAccessToken());
+//        prefUtils.setKeyIsLoggedIn();
         presenter.fetchAirports("Bearer "+response.getAccessToken());
     }
 

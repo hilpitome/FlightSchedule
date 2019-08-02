@@ -9,6 +9,7 @@ import com.workshop.hilpitome.flightscheduler.model.SchedulesResponse;
 import com.workshop.hilpitome.flightscheduler.utils.CommonView;
 import com.workshop.hilpitome.flightscheduler.utils.LufthansaServiceGenerator;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -36,6 +37,7 @@ public class FlightSchedulesPresenter {
     }
 
     public void fetchSchedules(String accessToken, String origin, String destination){
+
         LocalDate tomorrow = LocalDate.now().plusDays(1);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYY-MM-dd");
         String fromDateTime = formatter.format(tomorrow);
